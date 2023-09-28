@@ -35,6 +35,7 @@
 
 .letters p:nth-child(even):hover {
 	transform: rotateY(360deg);
+	transform: skew(10deg);
 	transition: 0.5s;
 }
 
@@ -42,5 +43,6 @@
 
 .letters p:nth-child(odd):hover {
 	transform: rotateX(360deg);
+	transform: skew(10deg);
 	transition: 1.5s;
 }
