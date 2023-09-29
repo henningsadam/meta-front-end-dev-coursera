@@ -1,3 +1,8 @@
+:root {
+    --main-background-color: white;
+    --card-background-color: lightgray;
+    --font-family: Ariel, sans-serif
+}
 
 * {
     margin: 0;
@@ -5,68 +10,71 @@
 }
 
 body {
-    margin: 1rem;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: max-content;
-    grid-template-rows: repeat(3, 1fr);
-    gap: 1rem;
+    background-color: var(--main-background-color);
+    margin: 2rem 3rem;
+    font-family: var(--font-family);
 }
 
 header {
-    background-color: lightgray;
-    grid-column: 1 / 4 ;
     display: flex;
-    justify-content: space-between;
-    
+    flex-direction: column;
+    align-items: center;
 }
 
-header img.logo {
-    height: 50px;
+header > img {
+    height: 100px;
+
 }
 
-nav ul {
-    display: flex;
-}
-
-nav ul li {
+header > nav > ul {
     list-style: none;
-    padding: 1rem;
+}
+
+header > nav > ul > li > a {
     background-color: white;
+    padding: 0.5rem 1rem;
+}
+
+nav > ul {
+    display: flex;
+    gap: 1rem
 }
 
 main {
-    background-color: lightgray;
-    grid-column: 1 / 4 ;
-}
-
-.sections {
-    display: flex;
+    display: grid;
+    grid-template-rows: repeat(3, auto);
     gap: 1rem;
 }
 
-section {
-    flex-grow: 1;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+.promo {
+    background-color: var(--card-background-color);
+    padding: 1rem;
+    border-radius: 0.5rem;
 }
 
-.promo {
+section {
     display: flex;
-    align-items: center;
-    padding: 1rem;
+    gap: 1rem
+}
+
+article {
+    background-color: var(--card-background-color);
+    border-radius: 1rem;
+    padding: 1rem
 }
 
 footer {
-    background-color: lightgray;
-    grid-column: 1 / 4 ;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
 }
 
-.logo-small {
-    height: 30px;
+footer div {
+    flex: 1;
+}
+
+footer img {
+    height: 1.5rem;
+}
+
+footer p {
+    text-align: right;
 }
