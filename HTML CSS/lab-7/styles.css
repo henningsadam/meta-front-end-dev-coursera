@@ -1,7 +1,9 @@
 :root {
+    --font-family: Ariel, sans-serif;
     --main-background-color: white;
-    --card-background-color: lightgray;
-    --font-family: Ariel, sans-serif
+    --card-background-color: #eee;
+    --primary-color: #465952;
+    --secondary-color: #F2CD13;
 }
 
 * {
@@ -15,15 +17,46 @@ body {
     font-family: var(--font-family);
 }
 
+h1, h2, h3, h4, h5, h6 {
+    color: var(--primary-color);
+}
+
+p {
+    color: var(--primary-color);
+}
+
+button {
+    border: none;
+}
+
+a, button {
+    box-sizing: border-box;
+    text-decoration: none;
+    background-color: white;
+    border: var(--primary-color) 1px solid;
+    color: var(--primary-color);
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+}
+
+a:hover, button:hover {
+    text-decoration: none;
+    background-color: var(--primary-color);
+    cursor: pointer;
+    color: white;
+    transition: .5s;
+}
+
 header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 1rem;
 }
 
 header > img {
     height: 100px;
-
+    display: block;
 }
 
 header > nav > ul {
@@ -31,8 +64,8 @@ header > nav > ul {
 }
 
 header > nav > ul > li > a {
-    background-color: white;
     padding: 0.5rem 1rem;
+    border: var(--primary-color) 1px solid;
 }
 
 nav > ul {
@@ -41,30 +74,55 @@ nav > ul {
 }
 
 main {
-    display: grid;
-    grid-template-rows: repeat(3, auto);
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
     gap: 1rem;
 }
 
 .promo {
-    background-color: var(--card-background-color);
+    /* background-color: var(--card-background-color); */
     padding: 1rem;
-    border-radius: 0.5rem;
 }
 
 section {
     display: flex;
+    flex-wrap: wrap;
     gap: 1rem
 }
 
 article {
+    border: var(--primary-color) 1px solid;
     background-color: var(--card-background-color);
-    border-radius: 1rem;
-    padding: 1rem
+    padding: 1rem;
+    flex: 1;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 0.5rem;
+}
+
+article:hover {
+    box-shadow: 3px 0px 20px #AAA;
+    transition: 0.5s;
+}
+
+article p {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4; /* number of lines to show */
+            line-clamp: 4; 
+    -webkit-box-orient: vertical;
+}
+
+article img {
+    height: 200px;
+    align-self: center;
 }
 
 footer {
     display: flex;
+    margin: 1rem ;
 }
 
 footer div {
