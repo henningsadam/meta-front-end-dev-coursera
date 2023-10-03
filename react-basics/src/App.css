@@ -24,6 +24,16 @@
   color: white;
 }
 
+.flex-container {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+nav > ul > a > li {
+  list-style: none;
+}
+
 .App-link {
   color: #61dafb;
 }
