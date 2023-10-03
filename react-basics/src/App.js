@@ -5,14 +5,45 @@ import Intro from './components/Intro';
 import Footer from './components/Footer';
 import Promo from './components/Promo';
 import Wrapper from './components/Wrapper';
+import Button from './components/Button';
+import Parent from './components/Parent';
 
 function App() {
+  function handleClick() {
+    let randomNum = Math.floor(Math.random() * 3) + 1;
+    console.log(randomNum);
+    let userInput = prompt('type a number');
+    alert(`Computer number: ${randomNum}, Your guess: ${userInput}`);
+  }
+
   return (
     <div className="App">
       <Heading firstName="Bob" />
       <Heading firstName="Adam" />
       <Nav item1="Home" item2="About" item3="Locations" item4="Contact" />
       <Promo />
+      <div>
+        <h1>Task: Add a button and handle a click event</h1>
+        <button onClick={handleClick}>Guess the number between 1 and 3</button>
+      </div>
+
+      <hr />
+      <hr />
+      <hr />
+      <hr />
+      <Promo />
+
+      <hr />
+      <hr />
+      <hr />
+      <hr />
+      <Parent />
+      <hr />
+      <hr />
+      <hr />
+      <hr />
+
+      <Button />
 
       <Wrapper />
 
